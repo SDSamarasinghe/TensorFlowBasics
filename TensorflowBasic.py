@@ -30,5 +30,11 @@ print(tensorA)
 print(tensorB)
 
 print ("Tensor Addition")
-tensorC = te.add(tensorA, tensorB)
+#tensorC = te.add(tensorA, tensorB)
+tensorC = tensorA + tensorB
+print(tensorC)
+
+#tensor subtraction
+print("Tensor Subtraction")
+tensorC = tensorA - tensorB
 print(tensorC)
