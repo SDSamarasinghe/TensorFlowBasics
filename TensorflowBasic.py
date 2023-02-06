@@ -16,3 +16,8 @@ print(x)
 x = te.range(start=5, limit=20, delta=3)
 print("Range function")
 print(x)
+
+#casting
+y = te.cast(x, dtype=te.float64)
+print("Casting")
+print(y)
