@@ -11,3 +11,8 @@ print(x)
 x = te.random.uniform((1,5), minval=0, maxval=2)
 print("Uniform Distribution")
 print(x)
+
+#range function
+x = te.range(start=5, limit=20, delta=3)
+print("Range function")
+print(x)
