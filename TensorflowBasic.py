@@ -21,3 +21,14 @@ print(x)
 y = te.cast(x, dtype=te.float64)
 print("Casting")
 print(y)
+
+#element wise addition
+tensorA = te.constant([20,6,7])
+tensorB = te.constant([45,7,21])
+
+print(tensorA)
+print(tensorB)
+
+print ("Tensor Addition")
+tensorC = te.add(tensorA, tensorB)
+print(tensorC)
