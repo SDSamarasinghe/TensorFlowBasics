@@ -43,3 +43,18 @@ print(tensorC)
 print("Tensor devision")
 tensorC = te.divide(tensorA,tensorB)
 print(tensorC)
+
+#tensor multiplication
+print("Tensor multiplication")
+tensorC = te.multiply(tensorA, tensorB)
+print(tensorC)
+
+print("Dot Product")
+import numpy as np
+
+tensorA = te.constant(np.array([1,2],[3,4]))
+tensorB = te.constant(np.array([11,12],[13,14]))
+
+print("tensorA")
+print(tensorA)
+
