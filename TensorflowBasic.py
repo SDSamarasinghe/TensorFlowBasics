@@ -73,3 +73,7 @@ print(x)
 
 print("x[:]")
 print(x[:])
+
+#skip values
+print("x[::2]")
+print(x[::2])
