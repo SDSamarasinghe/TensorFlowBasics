@@ -38,3 +38,8 @@ print(tensorC)
 print("Tensor Subtraction")
 tensorC = tensorA - tensorB
 print(tensorC)
+
+#tensorflow division
+print("Tensor devision")
+tensorC = te.divide(tensorA,tensorB)
+print(tensorC)
