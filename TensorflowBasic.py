@@ -66,3 +66,10 @@ print(tensorB)
 print("Dot Product")
 tensorC = te.tensordot(tensorA, tensorB, axes=1)
 print(tensorC)
+
+x = te.constant([0,10,15,20,25,30,35,40])
+print("printing tensor")
+print(x)
+
+print("x[:]")
+print(x[:])
