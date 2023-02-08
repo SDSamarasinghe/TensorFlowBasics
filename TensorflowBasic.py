@@ -94,4 +94,24 @@ print("Printing Tensor")
 print(x)
 
 #get the first row with all the elements
+print("x[0]")
 print(x[0])
+
+print("x[1]")
+print(x[1])
+
+#first two rows
+print("x[0:2,:1]")
+
+print(x[3,1])
+
+#reshaping
+tensorA = te.range(16)
+print("reshaping")
+print(tensorA)
+
+x = te.reshape(tensorA, (4,4))
+print(x)
+
+x = te.reshape(tensorA, (8,2))
+print(x)
