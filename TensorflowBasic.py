@@ -89,3 +89,9 @@ print(indicesIndexes)
 indexTensor = te.gather(x, indices=indicesIndexes)
 print(indexTensor)
 
+x = te.constant([[10,20],[30,40],[50,60],[70,80]])
+print("Printing Tensor")
+print(x)
+
+#get the first row with all the elements
+print(x[0])
