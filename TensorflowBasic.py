@@ -77,3 +77,15 @@ print(x[:])
 #skip values
 print("x[::2]")
 print(x[::2])
+
+#reverse order
+print("x[::-1]")
+print(x[::-1])
+
+#indices
+print("Indices")
+indicesIndexes = te.constant([0,3])
+print(indicesIndexes)
+indexTensor = te.gather(x, indices=indicesIndexes)
+print(indexTensor)
+
