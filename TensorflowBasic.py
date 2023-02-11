@@ -1,117 +1,119 @@
-import os
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
-import tensorflow as te
+# import os
+# os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+# import tensorflow as te
 
-# #Normal Distribution
-# x = te.random.normal((4,4), mean=0, stddev=1)
-# print("Normal Distribution")
-# print(x)
+# # #Normal Distribution
+# # x = te.random.normal((4,4), mean=0, stddev=1)
+# # print("Normal Distribution")
+# # print(x)
 
-# #uniform distribution
-# x = te.random.uniform((1,5), minval=0, maxval=2)
-# print("Uniform Distribution")
-# print(x)
+# # #uniform distribution
+# # x = te.random.uniform((1,5), minval=0, maxval=2)
+# # print("Uniform Distribution")
+# # print(x)
 
-# #range function
-# x = te.range(start=5, limit=20, delta=3)
-# print("Range function")
-# print(x)
+# # #range function
+# # x = te.range(start=5, limit=20, delta=3)
+# # print("Range function")
+# # print(x)
 
-# #casting
-# y = te.cast(x, dtype=te.float64)
-# print("Casting")
-# print(y)
+# # #casting
+# # y = te.cast(x, dtype=te.float64)
+# # print("Casting")
+# # print(y)
 
-# #element wise addition
-# tensorA = te.constant([20,6,7])
-# tensorB = te.constant([45,7,21])
+# # #element wise addition
+# # tensorA = te.constant([20,6,7])
+# # tensorB = te.constant([45,7,21])
 
+# # print(tensorA)
+# # print(tensorB)
+
+# # print ("Tensor Addition")
+# # #tensorC = te.add(tensorA, tensorB)
+# # tensorC = tensorA + tensorB
+# # print(tensorC)
+
+# # #tensor subtraction
+# # print("Tensor Subtraction")
+# # tensorC = tensorA - tensorB
+# # print(tensorC)
+
+# # #tensorflow division
+# # print("Tensor devision")
+# # tensorC = te.divide(tensorA,tensorB)
+# # print(tensorC)
+
+# # #tensor multiplication
+# # print("Tensor multiplication")
+# # tensorC = te.multiply(tensorA, tensorB)
+# # print(tensorC)
+
+# print("Dot Product")
+# import numpy as np
+
+# tensorA = te.constant(np.array([[1,2],[3,4]]))
+# tensorB = te.constant(np.array([[11,12],[13,14]]))
+
+# print("tensorA")
 # print(tensorA)
+
+# print("tensorB")
 # print(tensorB)
 
-# print ("Tensor Addition")
-# #tensorC = te.add(tensorA, tensorB)
-# tensorC = tensorA + tensorB
+# #[[1*11 + 2*13]] ....
+
+# print("Dot Product")
+# tensorC = te.tensordot(tensorA, tensorB, axes=1)
 # print(tensorC)
 
-# #tensor subtraction
-# print("Tensor Subtraction")
-# tensorC = tensorA - tensorB
-# print(tensorC)
+# x = te.constant([0,10,15,20,25,30,35,40])
+# print("printing tensor")
+# print(x)
 
-# #tensorflow division
-# print("Tensor devision")
-# tensorC = te.divide(tensorA,tensorB)
-# print(tensorC)
+# print("x[:]")
+# print(x[:])
 
-# #tensor multiplication
-# print("Tensor multiplication")
-# tensorC = te.multiply(tensorA, tensorB)
-# print(tensorC)
+# #skip values
+# print("x[::2]")
+# print(x[::2])
 
-print("Dot Product")
-import numpy as np
+# #reverse order
+# print("x[::-1]")
+# print(x[::-1])
 
-tensorA = te.constant(np.array([[1,2],[3,4]]))
-tensorB = te.constant(np.array([[11,12],[13,14]]))
+# #indices
+# print("Indices")
+# indicesIndexes = te.constant([0,3])
+# print(indicesIndexes)
+# indexTensor = te.gather(x, indices=indicesIndexes)
+# print(indexTensor)
 
-print("tensorA")
-print(tensorA)
+# x = te.constant([[10,20],[30,40],[50,60],[70,80]])
+# print("Printing Tensor")
+# print(x)
 
-print("tensorB")
-print(tensorB)
+# #get the first row with all the elements
+# print("x[0]")
+# print(x[0])
 
-#[[1*11 + 2*13]] ....
+# print("x[1]")
+# print(x[1])
 
-print("Dot Product")
-tensorC = te.tensordot(tensorA, tensorB, axes=1)
-print(tensorC)
+# #first two rows
+# print("x[0:2,:1]")
 
-x = te.constant([0,10,15,20,25,30,35,40])
-print("printing tensor")
-print(x)
+# print(x[3,1])
 
-print("x[:]")
-print(x[:])
+# #reshaping
+# tensorA = te.range(16)
+# print("reshaping")
+# print(tensorA)
 
-#skip values
-print("x[::2]")
-print(x[::2])
+# x = te.reshape(tensorA, (4,4))
+# print(x)
 
-#reverse order
-print("x[::-1]")
-print(x[::-1])
+# x = te.reshape(tensorA, (8,2))
+# print(x)
 
-#indices
-print("Indices")
-indicesIndexes = te.constant([0,3])
-print(indicesIndexes)
-indexTensor = te.gather(x, indices=indicesIndexes)
-print(indexTensor)
 
-x = te.constant([[10,20],[30,40],[50,60],[70,80]])
-print("Printing Tensor")
-print(x)
-
-#get the first row with all the elements
-print("x[0]")
-print(x[0])
-
-print("x[1]")
-print(x[1])
-
-#first two rows
-print("x[0:2,:1]")
-
-print(x[3,1])
-
-#reshaping
-tensorA = te.range(16)
-print("reshaping")
-print(tensorA)
-
-x = te.reshape(tensorA, (4,4))
-print(x)
-
-x = te.reshape(tensorA, (8,2))
-print(x)
