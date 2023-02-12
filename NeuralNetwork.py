@@ -11,5 +11,8 @@ from keras.datasets import mnist
 print(x_train.shape)
 print(y_train.shape)
 
+x_train = x_train.reshape(-1, 28*28).astype("float32") / 255.0
+x_train = x_test.reshape(-1, 28*28).astype("float32") / 255.0
+
 
 
